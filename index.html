@@ -109,7 +109,7 @@
             </div>
             
             <div class="bibit-container" id="homeBibitContainer">
-                <!-- Akan diisi oleh JavaScript -->
+                <!-- Varietas unggulan dengan gambar -->
             </div>
             
             <div class="text-center fade-in" style="margin-top: 40px;">
@@ -154,31 +154,35 @@
 
     <script src="js/main.js"></script>
     <script>
-        // Data varietas untuk halaman beranda (hanya 4)
+        // Data varietas untuk halaman beranda (4 varietas dengan gambar)
         const homeBibitData = [
             {
                 id: 1,
                 nama: "Cabai Merah Keriting",
                 deskripsi: "Varietas unggulan dengan buah keriting, tingkat kepedasan tinggi, dan hasil panen melimpah.",
-                icon: "fas fa-pepper-hot"
+                icon: "fas fa-pepper-hot",
+                gambar: "image/cabai-merah-keriting.jpg"
             },
             {
                 id: 2,
                 nama: "Cabai Rawit Hijau",
                 deskripsi: "Rawit dengan buah lebat, tahan cuaca ekstrem, dan rasa pedas menyengat.",
-                icon: "fas fa-fire"
+                icon: "fas fa-fire",
+                gambar: "image/cabai-rawit-hijau.jpg"
             },
             {
                 id: 3,
                 nama: "Cabai Besar Hibrida",
                 deskripsi: "Hibrida unggul dengan buah besar, tebal daging, cocok untuk pasar modern.",
-                icon: "fas fa-apple-alt"
+                icon: "fas fa-apple-alt",
+                gambar: "image/cabai-besar-hibrida.jpg"
             },
             {
                 id: 4,
-                nama: "Cabai Paprika",
-                deskripsi: "Paprika warna-warni untuk kebutuhan kuliner dan industri makanan sehat.",
-                icon: "fas fa-pepper-hot"
+                nama: "Cabai Rawit Putih",
+                deskripsi: "Rawit putih dengan tingkat kepedasan ekstrem, permintaan tinggi untuk industri.",
+                icon: "fas fa-fire",
+                gambar: "image/cabai-rawit-putih.jpg"
             }
         ];
 
@@ -193,7 +197,10 @@
                 
                 bibitCard.innerHTML = `
                     <div class="bibit-img">
-                        <i class="${bibit.icon}"></i>
+                        <img src="${bibit.gambar}" alt="${bibit.nama}" loading="lazy">
+                        <div class="bibit-icon">
+                            <i class="${bibit.icon}"></i>
+                        </div>
                     </div>
                     <div class="bibit-info">
                         <h3>${bibit.nama}</h3>
