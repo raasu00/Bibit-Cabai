@@ -1,137 +1,120 @@
-# **Rangkuman Perubahan & Dokumentasi Website BibitCabai**
+# BibitCabai - Website Perbibitan Cabai Unggul
 
-## 📋 **Ringkasan Perubahan Utama**
+https://bibit-cabai.vercel.app/
 
-Website BibitCabai telah dipisah dari **satu file HTML besar** menjadi **4 halaman terpisah** dengan struktur yang lebih rapi dan mudah dikelola:
+## 📋 Tentang Proyek
 
-### **🔀 Perubahan Struktur File:**
-| File Lama | File Baru | Perubahan |
-|-----------|-----------|-----------|
-| `index.html` (SPA lengkap) | **4 halaman HTML terpisah** | Dari Single Page App ke Multi-page Website |
-| CSS dalam tag `<style>` | `css/style.css` + `css/responsive.css` | CSS eksternal terstruktur |
-| JavaScript dalam tag `<script>` | `js/main.js` + `js/paket.js` + `js/bibit.js` | JavaScript modular |
+BibitCabai adalah website perusahaan perbibitan cabai yang menyediakan bibit cabai berkualitas tinggi dengan varietas unggulan teruji. Website ini dibangun untuk membantu petani Indonesia meningkatkan produktivitas dan kualitas hasil panen cabai.
 
-### **🎯 **4 Halaman Utama yang Dibuat:**
+## ✨ Fitur Utama
 
-1. **`index.html`** - Halaman Beranda
-   - Hero section dengan CTA utama
-   - Deskripsi toko singkat
-   - 2 paket unggulan (Pemula & Professional)
-   - Preview 4 varietas terpopuler
-   - Link ke halaman lainnya
+- **Responsive Design** - Tampilan optimal di semua perangkat (desktop, tablet, mobile)
+- **3 Halaman Utama** - Beranda, Varietas Bibit, dan Kontak
+- **Animasi Modern** - Efek fade-in dan hover untuk pengalaman pengguna yang menarik
+- **Integrasi WhatsApp** - Tombol pesan langsung via WhatsApp
+- **Galeri Varietas** - 10 varietas cabai dengan gambar dan deskripsi lengkap
+- **Paket Unggulan** - Dua paket bibit dengan spesifikasi jelas
 
-2. **`paket-bibit.html`** - Halaman Paket Bibit
-   - Menampilkan **7 paket lengkap**
-   - Filter kategori: Pemula, Menengah, Skala Besar
-   - Harga dan fitur detail setiap paket
-   - Tombol pesan langsung ke WhatsApp
-
-3. **`varietas-bibit.html`** - Halaman Varietas Bibit
-   - Menampilkan **10 varietas cabai**
-   - Ikon dan deskripsi masing-masing varietas
-   - Tombol konsultasi ke WhatsApp
-
-4. **`kontak.html`** - Halaman Kontak (gabungan Tentang Kami)
-   - Deskripsi singkat perusahaan
-   - **Informasi kontak langsung ke WhatsApp Anda**
-   - Link ke **Google Maps lokasi Anda**
-   - Telepon dan email
-
-## 🚀 **Fitur Utama yang Dipertahankan & Ditingkatkan:**
-
-### **✅ Fitur yang Dipertahankan:**
-- Desain responsif untuk semua perangkat
-- Skema warna hijau (pertanian) dengan aksen oranye
-- Navigasi mobile-friendly dengan hamburger menu
-- Animasi hover pada kartu produk
-- Layout grid modern
-
-### **⭐ Peningkatan Baru:**
-1. **CTA Langsung ke WhatsApp** - Semua tombol pemesanan langsung ke: `https://wa.me/628984338479`
-2. **Google Maps Embed** - Peta lokasi langsung ke: `https://maps.app.goo.gl/A5UY88FMWTane6wf6`
-3. **SEO Friendly** - Title dan meta description yang relevan per halaman
-4. **Loading Lebih Cepat** - File terpisah = loading lebih optimal
-5. **Maintenance Mudah** - Update satu halaman tidak mempengaruhi lainnya
-
-## 📁 **Struktur Folder Final:**
+## 🏗️ Struktur Proyek
 
 ```
-bibitcabai-website/
-├── index.html              # Halaman Beranda
-├── paket-bibit.html        # Halaman Paket Bibit (7 paket)
-├── varietas-bibit.html     # Halaman Varietas (10 varietas)
-├── kontak.html             # Halaman Kontak + Tentang Kami singkat
-├── README.md               # Dokumentasi ini
+bibitcabai/
+├── index.html              # Halaman beranda
+├── varietas-bibit.html     # Halaman varietas bibit
+├── kontak.html             # Halaman kontak
 ├── css/
-│   ├── style.css          # 701 baris - Styling utama
-│   └── responsive.css     # 57 baris - Media queries
-└── js/
-    ├── main.js            # 41 baris - Menu mobile & navigasi
-    ├── paket.js           # 149 baris - Logika paket & filter
-    └── bibit.js           # 89 baris - Data & render varietas
+│   ├── style.css          # Stylesheet utama
+│   └── responsive.css     # Stylesheet responsif
+├── js/
+│   └── main.js            # JavaScript utama
+├── image/                  # Folder gambar
+│   ├── paket-petani-pemula.jpg
+│   ├── paket-petani-professional.jpg
+│   ├── cabai-merah-keriting.jpg
+│   ├── cabai-rawit-hijau.jpg
+│   ├── cabai-besar-hibrida.jpg
+│   ├── cabai-paprika.jpg
+│   ├── cabai-jalapeno.jpg
+│   ├── cabai-hias.jpg
+│   ├── cabai-keriting-lokal.jpg
+│   ├── cabai-rawit-putih.jpg
+│   ├── cabai-merah-besar.jpg
+│   └── cabai-tahan-layu.jpg
+└── README.md              # Dokumentasi proyek
 ```
 
-## 🔗 **Integrasi Kontak:**
+## 🛠️ Teknologi yang Digunakan
 
-| Platform | Link/Informasi |
-|----------|----------------|
-| **WhatsApp** | `https://wa.me/628984338479` |
-| **Google Maps** | `https://maps.app.goo.gl/A5UY88FMWTane6wf6` |
-| **Telepon** | 0898-4338-479 |
-| **Email** | bibitcabai@gmail.com |
+- **HTML5** - Struktur halaman web
+- **CSS3** - Styling dengan custom properties (CSS variables)
+- **JavaScript (Vanilla)** - Interaktivitas dan animasi
+- **Font Awesome 6.4.0** - Ikon dan simbol
+- **Google Maps Embed** - Peta lokasi perusahaan
+- **Google Fonts** - Font Segoe UI
 
-## 🛠 **Instalasi & Penggunaan:**
+## 🎨 Fitur Design
 
-1. **Download semua file** ke folder `bibitcabai-website`
-2. **Buka `index.html`** di browser untuk melihat halaman beranda
-3. **Ubah informasi kontak** jika diperlukan:
-   - Cari semua kemunculan `628984338479` untuk mengganti nomor WhatsApp
-   - Cari `bibitcabai@gmail.com` untuk mengganti email
-   - Cari link Google Maps untuk update lokasi
+### Header & Navigasi
+- Logo "BibitCabai" dengan warna hijau dan oranye
+- Menu navigasi di tengah: Beranda, Varietas Bibit, Kontak
+- Tombol "Pesan Sekarang" dengan style kotak oranye
+- Menu mobile dengan hamburger icon
 
-4. **Untuk deploy ke hosting:**
-   - Upload semua file ke hosting (cPanel, Netlify, Vercel, dll)
-   - Pastikan struktur folder tetap sama
-   - Test semua halaman dan link WhatsApp
+### Halaman Beranda
+- Hero section dengan background gradient dan gambar
+- Deskripsi singkat perusahaan
+- Dua paket bibit (Petani Pemula & Petani Professional)
+- Preview 4 varietas cabai terpopuler
 
-## 📱 **Optimasi Mobile:**
+### Halaman Varietas Bibit
+- 10 varietas cabai lengkap dengan gambar
+- Setiap varietas memiliki ikon dan deskripsi
+- Tombol "Konsultasi Gratis" yang terhubung ke WhatsApp
 
-- ✅ Menu hamburger otomatis di layar < 768px
-- ✅ Grid layout berubah sesuai ukuran layar
-- ✅ Tombol cukup besar untuk touch
-- ✅ Font size optimal untuk readability
+### Halaman Kontak
+- Informasi kontak lengkap (WhatsApp, Telepon, Email, Lokasi)
+- Peta Google Maps embed
+- Deskripsi tentang perusahaan
 
-## 🎨 **Skema Warna Utama:**
+## 📱 Responsive Breakpoints
 
-```css
---primary: #2e7d32;        /* Hijau utama */
---primary-dark: #1b5e20;   /* Hijau gelap */
---secondary: #ff9800;      /* Oranye */
---accent: #ff5722;         /* Oranye merah */
-```
+- **Desktop**: > 992px
+- **Tablet**: 768px - 992px
+- **Mobile**: < 768px
 
-## 📈 **Keuntungan Struktur Baru:**
+## 🚀 Cara Menjalankan
 
-1. **SEO Lebih Baik** - Setiap halaman memiliki title dan konten unik
-2. **Analytics Mudah** - Track kunjungan per halaman
-3. **Sharing Optimal** - Bisa share link spesifik (contoh: langsung ke paket tertentu)
-4. **Maintenance** - Update satu halaman tidak rusak halaman lain
-5. **Scalability** - Mudah tambah halaman baru nanti
+1. Clone atau download repository ini
+2. Pastikan struktur folder sesuai dengan di atas
+3. Buka file `index.html` di browser
+4. Tidak memerlukan server khusus, bisa langsung dijalankan secara lokal
 
-## ⚠️ **Catatan Penting:**
+## 📞 Informasi Kontak
 
-1. **Background Images** - Masih menggunakan Unsplash, bisa ganti dengan foto produk asli
-2. **Form Kontak** - Form dihapus, diganti direct WhatsApp (lebih efektif untuk konversi)
-3. **Data Statis** - Data paket dan varietas di JavaScript, bisa pindah ke database nanti
-4. **Performance** - File CSS/JS di-cache browser untuk loading lebih cepat
-
-## 📞 **Dukungan & Kontak:**
-
-Untuk pertanyaan atau bantuan lebih lanjut:
-- **WhatsApp**: [0898-4338-479](https://wa.me/628984338479)
+- **WhatsApp**: 0898-4338-479
 - **Email**: bibitcabai@gmail.com
-- **Lokasi**: [Lihat di Google Maps](https://maps.app.goo.gl/A5UY88FMWTane6wf6)
+- **Lokasi**: Jawa Barat, Indonesia
+
+## 📄 Lisensi
+
+Proyek ini dibuat untuk tujuan edukasi dan komersial. Hak cipta dilindungi oleh BibitCabai © 2023.
+
+## 👨‍💻 Developer
+
+Website ini dikembangkan dengan:
+- HTML5, CSS3, JavaScript vanilla
+- Pendekatan mobile-first
+- Optimasi performa dan SEO
+- User experience yang intuitif
+
+## 🔄 Versi
+
+**Versi 1.0** - Desember 2023
+- Launch website pertama
+- 3 halaman utama
+- 10 varietas cabai
+- Responsive design
 
 ---
 
-**🎯 Website siap digunakan dan di-deploy!** Semua link WhatsApp dan Google Maps sudah terintegrasi dengan informasi Anda.
+**Catatan**: Website ini siap digunakan dan dapat langsung dihosting di GitHub Pages, Netlify, atau hosting lainnya.
