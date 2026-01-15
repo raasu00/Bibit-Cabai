@@ -16,6 +16,7 @@
 @media (max-width: 768px) {
     .mobile-menu-btn {
         display: block;
+        margin-right: 10px;
     }
     
     nav ul {
@@ -27,14 +28,16 @@
         height: auto;
         background-color: white;
         flex-direction: column;
-        align-items: center;
-        padding: 20px 0;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        align-items: stretch;
+        padding: 0;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
         transition: all 0.5s ease;
         z-index: 1000;
         opacity: 0;
         visibility: hidden;
         transform: translateY(-20px);
+        border-radius: 0 0 10px 10px;
+        overflow: hidden;
     }
     
     nav ul.active {
@@ -46,18 +49,57 @@
     nav ul li {
         margin: 0;
         width: 100%;
-        text-align: center;
+        text-align: left;
+        border-bottom: 1px solid var(--border);
+    }
+    
+    nav ul li:last-child {
+        border-bottom: none;
     }
     
     nav ul li a {
         font-size: 1.1rem;
         display: block;
-        padding: 12px 20px;
-        border-bottom: 1px solid var(--border);
+        padding: 15px 20px;
+        color: var(--dark);
+        transition: all 0.3s;
     }
     
-    nav ul li:last-child a {
-        border-bottom: none;
+    nav ul li a:hover {
+        background-color: var(--light-gray);
+        color: var(--primary);
+    }
+    
+    nav ul li a.active {
+        background-color: var(--primary-light);
+        color: white;
+    }
+    
+    nav ul li a.active:after {
+        display: none;
+    }
+    
+    /* Tombol Pesan Sekarang di Menu Mobile */
+    .mobile-order-btn {
+        display: block;
+        width: calc(100% - 40px);
+        margin: 20px;
+        text-align: center;
+        background-color: var(--secondary);
+        color: white;
+        padding: 12px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1rem;
+        transition: all 0.3s;
+        border: 2px solid var(--secondary);
+    }
+    
+    .mobile-order-btn:hover {
+        background-color: #e68900;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
     
     .hero {
@@ -97,6 +139,14 @@
 }
 
 @media (max-width: 576px) {
+    .logo-icon {
+        font-size: 1.5rem;
+    }
+    
+    .logo-text {
+        font-size: 1.2rem;
+    }
+    
     .hero h1 {
         font-size: 1.9rem;
     }
@@ -119,5 +169,10 @@
     
     .contact-info, .contact-map {
         padding: 20px;
+    }
+    
+    .mobile-menu-btn {
+        font-size: 1.3rem;
+        margin-right: 5px;
     }
 }
