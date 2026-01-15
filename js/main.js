@@ -41,6 +41,26 @@ function setupMobileMenu() {
     }
 }
 
+// Fungsi untuk menambahkan tombol Pesan Sekarang di menu mobile
+function addMobileOrderButton() {
+    const navMenu = document.getElementById('navMenu');
+    if (!navMenu) return;
+    
+    // Cek apakah tombol sudah ada
+    const existingBtn = navMenu.querySelector('.mobile-order-btn');
+    if (existingBtn) return;
+    
+    // Buat tombol Pesan Sekarang
+    const orderBtn = document.createElement('a');
+    orderBtn.href = 'https://wa.me/628984338479?text=Halo%20BibitCabai,%20saya%20ingin%20pesan%20bibit%20cabai';
+    orderBtn.target = '_blank';
+    orderBtn.className = 'mobile-order-btn';
+    orderBtn.innerHTML = '<i class="fab fa-whatsapp"></i> Pesan Sekarang';
+    
+    // Tambahkan tombol ke menu
+    navMenu.appendChild(orderBtn);
+}
+
 // Fungsi untuk animasi scroll fade-in
 function setupScrollAnimation() {
     const fadeElements = document.querySelectorAll('.fade-in, .fade-in-up');
@@ -86,6 +106,7 @@ function animateElementsOnLoad() {
 // Inisialisasi saat halaman dimuat
 document.addEventListener('DOMContentLoaded', () => {
     setupMobileMenu();
+    addMobileOrderButton();
     animateElementsOnLoad();
     setupScrollAnimation();
     
