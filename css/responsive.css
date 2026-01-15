@@ -1,3 +1,5 @@
+/* Responsive Styles */
+
 /* Tablet - 992px ke bawah */
 @media (max-width: 992px) {
     .hero h1 {
@@ -124,7 +126,7 @@
     
     /* Sembunyikan tombol Pesan Sekarang di header mobile */
     .order-now-btn {
-        display: none;
+        display: none !important; /* Tambahkan !important untuk memastikan disembunyikan di mobile */
     }
     
     .hero {
@@ -193,5 +195,35 @@
     .mobile-menu-btn {
         font-size: 1.3rem;
         margin-right: 5px;
+    }
+}
+
+/* Desktop - Tambahkan rule untuk menampilkan tombol Pesan Sekarang di desktop saja */
+@media (min-width: 769px) {
+    .mobile-order-btn {
+        display: none !important;
+    }
+    
+    .order-now-btn {
+        display: inline-flex !important; /* Tampilkan di desktop */
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 10px 25px;
+        background-color: var(--secondary);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+    
+    .order-now-btn:hover {
+        background-color: #e68900;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
 }
