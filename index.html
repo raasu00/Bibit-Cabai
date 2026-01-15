@@ -34,32 +34,37 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Hero Section (Updated) -->
+    <section class="hero fade-in">
         <div class="container">
-            <h1>Bibit Cabai Unggul untuk Hasil Panen Melimpah</h1>
-            <p>Spesialis penyedia bibit cabai berkualitas tinggi dengan varietas terlengkap dan paket hemat untuk petani Indonesia.</p>
-            <a href="paket-bibit.html" class="btn">Lihat Paket Bibit</a>
+            <div class="hero-content">
+                <h1 class="fade-in-up">Bibit Cabai Unggul untuk Hasil Panen Melimpah</h1>
+                <p class="fade-in-up" style="animation-delay: 0.2s;">Spesialis penyedia bibit cabai berkualitas tinggi dengan varietas terlengkap dan paket hemat untuk petani Indonesia.</p>
+                <div class="hero-buttons fade-in-up" style="animation-delay: 0.4s;">
+                    <a href="paket-bibit.html" class="btn">Lihat Paket Bibit</a>
+                    <a href="varietas-bibit.html" class="btn btn-outline">Lihat Varietas Bibit</a>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Home Content -->
     <section class="home-content">
         <div class="container">
-            <div class="toko-description">
+            <div class="toko-description fade-in">
                 <h2>Selamat Datang di BibitCabai</h2>
                 <p>BibitCabai adalah perusahaan perbibitan cabai yang berkomitmen untuk menyediakan bibit cabai berkualitas tinggi dengan varietas unggulan yang telah teruji di lapangan. Kami hadir untuk membantu petani Indonesia meningkatkan produktivitas dan kualitas hasil panen cabai.</p>
                 <p>Dengan pengalaman lebih dari 10 tahun di bidang perbibitan, kami telah mengembangkan sistem produksi bibit yang modern dengan standar kualitas yang ketat. Setiap bibit yang kami hasilkan melalui proses seleksi yang teliti untuk memastikan daya tumbuh optimal, ketahanan terhadap penyakit, dan produktivitas yang tinggi.</p>
                 <p>Kami tidak hanya menjual bibit, tetapi juga memberikan pendampingan dan konsultasi teknis kepada petani untuk memastikan keberhasilan budidaya cabai. Tim ahli kami siap membantu Anda dari tahap persiapan lahan hingga panen.</p>
             </div>
             
-            <div class="section-title">
+            <div class="section-title fade-in">
                 <h2>Paket Unggulan Kami</h2>
                 <p>Dua paket terlaris yang paling diminati oleh petani cabai di seluruh Indonesia.</p>
             </div>
             
             <div class="paket-container">
-                <div class="paket-card">
+                <div class="paket-card fade-in" style="animation-delay: 0.1s;">
                     <div class="paket-header" style="background-color: var(--primary-dark);">
                         <h3>Paket Petani Pemula</h3>
                         <div class="harga">Rp 150.000</div>
@@ -77,7 +82,7 @@
                     </div>
                 </div>
                 
-                <div class="paket-card">
+                <div class="paket-card fade-in" style="animation-delay: 0.2s;">
                     <div class="paket-header" style="background-color: var(--accent);">
                         <h3>Paket Petani Professional</h3>
                         <div class="harga">Rp 450.000</div>
@@ -97,7 +102,7 @@
                 </div>
             </div>
             
-            <div class="section-title" style="margin-top: 80px;">
+            <div class="section-title fade-in" style="margin-top: 80px;">
                 <h2>Varietas Unggulan</h2>
                 <p>Beberapa varietas bibit cabai terbaik yang kami sediakan</p>
             </div>
@@ -106,7 +111,7 @@
                 <!-- Akan diisi oleh JavaScript -->
             </div>
             
-            <div class="text-center" style="margin-top: 40px;">
+            <div class="text-center fade-in" style="margin-top: 40px;">
                 <a href="varietas-bibit.html" class="btn btn-primary">Lihat Semua Varietas</a>
             </div>
         </div>
@@ -181,9 +186,10 @@
         document.addEventListener('DOMContentLoaded', function() {
             const container = document.getElementById('homeBibitContainer');
             
-            homeBibitData.forEach(bibit => {
+            homeBibitData.forEach((bibit, index) => {
                 const bibitCard = document.createElement('div');
-                bibitCard.className = 'bibit-card';
+                bibitCard.className = 'bibit-card fade-in';
+                bibitCard.style.animationDelay = `${0.1 * index}s`;
                 
                 bibitCard.innerHTML = `
                     <div class="bibit-img">
