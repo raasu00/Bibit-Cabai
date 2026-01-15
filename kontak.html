@@ -99,24 +99,12 @@
         }
         
         .map-info {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
             margin-bottom: 15px;
         }
         
         .map-info h3 {
             color: var(--primary-dark);
             font-size: 1.4rem;
-        }
-        
-        .area-badge {
-            background-color: var(--secondary);
-            color: white;
-            padding: 6px 15px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 600;
         }
         
         .whatsapp-contact {
@@ -239,26 +227,19 @@
                             <div>
                                 <strong>WhatsApp</strong>
                                 <span>19/7 (19 jam selama 7 hari)</span>
-                                <div class="whatsapp-contact">
-                                    <strong>📱 WhatsApp Now!</strong>
-                                    <p>Klik tombol di bawah untuk chat langsung:</p>
-                                    <a href="https://wa.me/628984338479?text=Halo%20BibitCabai,%20saya%20ingin%20konsultasi%20tentang%20bibit%20cabai" class="btn" target="_blank" style="margin-top: 10px; width: 100%;">
-                                        <i class="fab fa-whatsapp"></i> Chat via WhatsApp
-                                    </a>
-                                </div>
                             </div>
                         </li>
                     </ul>
                 </div>
                 
-                <!-- Lokasi Kami -->
+                <!-- Lokasi & Layanan -->
                 <div class="contact-section fade-in" style="animation-delay: 0.2s;">
-                    <h3><i class="fas fa-map-marker-alt"></i> Lokasi Kami</h3>
+                    <h3><i class="fas fa-map-marker-alt"></i> Lokasi & Layanan</h3>
                     <ul class="contact-info-list">
                         <li>
                             <i class="fas fa-map-pin"></i>
                             <div>
-                                <strong>Alamat</strong>
+                                <strong>Lokasi</strong>
                                 <span>Temanggung, Jawa Tengah, Indonesia</span>
                             </div>
                         </li>
@@ -269,20 +250,18 @@
                         <p>Kami melayani pesan antar di area:<br>
                         • Temanggung-Magelang<br>
                         • Temanggung-Semarang<br>
-                        • Temanggung-Pekalongan-Pemalang<br>
-                        Mencakup area wilayah Jawa Tengah</p>
+                        • Temanggung-Pekalongan</p>
                     </div>
                 </div>
             </div>
             
-            <!-- Area Layanan & Peta -->
+            <!-- Peta Lokasi -->
             <div class="map-container fade-in" style="animation-delay: 0.3s;">
                 <div class="map-info">
-                    <h3><i class="fas fa-map"></i> Area Layanan Kami</h3>
-                    <span class="area-badge">Seluruh Jawa Tengah</span>
+                    <h3><i class="fas fa-map"></i> Lokasi Pembibitan Kami</h3>
                 </div>
                 <p style="color: var(--gray); margin-bottom: 20px; font-size: 1.1rem;">
-                    Kami melayani seluruh wilayah Jawa Tengah dengan sistem pengiriman yang aman dan terpercaya.
+                    Temukan lokasi pembibitan kami di Google Maps.
                 </p>
                 
                 <!-- Google Maps Embed -->
@@ -298,37 +277,11 @@
                     </iframe>
                 </div>
                 
-                <!-- Informasi Area Layanan -->
-                <div class="area-layanan-detail" style="margin-top: 30px; background-color: var(--light-gray); padding: 20px; border-radius: 10px;">
-                    <h4 style="color: var(--primary-dark); margin-bottom: 15px; font-size: 1.2rem;">
-                        <i class="fas fa-shipping-fast"></i> Cakupan Layanan Pengiriman
-                    </h4>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
-                        <div style="background-color: white; padding: 15px; border-radius: 8px;">
-                            <h5 style="color: var(--primary); margin-bottom: 8px; font-size: 1rem;">
-                                <i class="fas fa-star"></i> Wilayah Utama
-                            </h5>
-                            <p style="color: var(--gray); font-size: 0.9rem; margin-bottom: 5px;">• Temanggung</p>
-                            <p style="color: var(--gray); font-size: 0.9rem; margin-bottom: 5px;">• Magelang</p>
-                            <p style="color: var(--gray); font-size: 0.9rem; margin-bottom: 5px;">• Semarang</p>
-                        </div>
-                        <div style="background-color: white; padding: 15px; border-radius: 8px;">
-                            <h5 style="color: var(--primary); margin-bottom: 8px; font-size: 1rem;">
-                                <i class="fas fa-map-marked-alt"></i> Wilayah Lainnya
-                            </h5>
-                            <p style="color: var(--gray); font-size: 0.9rem; margin-bottom: 5px;">• Pekalongan</p>
-                            <p style="color: var(--gray); font-size: 0.9rem; margin-bottom: 5px;">• Pemalang</p>
-                            <p style="color: var(--gray); font-size: 0.9rem; margin-bottom: 5px;">• Salatiga</p>
-                        </div>
-                        <div style="background-color: white; padding: 15px; border-radius: 8px;">
-                            <h5 style="color: var(--primary); margin-bottom: 8px; font-size: 1rem;">
-                                <i class="fas fa-info-circle"></i> Informasi
-                            </h5>
-                            <p style="color: var(--gray); font-size: 0.9rem;">
-                                Untuk wilayah lain di Jawa Tengah, silakan hubungi kami untuk informasi biaya pengiriman.
-                            </p>
-                        </div>
-                    </div>
+                <!-- Tombol Google Maps -->
+                <div style="text-align: center; margin-top: 20px;">
+                    <a href="https://maps.app.goo.gl/Xe626rYtsJQkGyWV9" class="btn btn-primary" target="_blank" style="display: inline-flex; align-items: center; gap: 8px;">
+                        <i class="fab fa-google"></i> Buka di Google Maps
+                    </a>
                 </div>
             </div>
             
@@ -340,10 +293,7 @@
                 </p>
                 <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
                     <a href="https://wa.me/628984338479?text=Halo%20BibitCabai,%20saya%20ingin%20pesan%20bibit%20cabai" class="btn" target="_blank" style="background-color: white; color: var(--primary);">
-                        <i class="fab fa-whatsapp"></i> Pesan via WhatsApp
-                    </a>
-                    <a href="tel:08984338479" class="btn btn-outline">
-                        <i class="fas fa-phone"></i> Telepon Sekarang
+                        <i class="fab fa-whatsapp"></i> WhatsApp
                     </a>
                 </div>
             </div>
