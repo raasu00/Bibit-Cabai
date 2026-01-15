@@ -24,7 +24,7 @@ function setupMobileMenu() {
         });
         
         // Tutup menu mobile saat klik link
-        const navLinks = navMenu.querySelectorAll('a');
+        const navLinks = navMenu.querySelectorAll('a:not(.mobile-order-btn)'); // Kecuali tombol Pesan Sekarang mobile
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('active');
@@ -71,15 +71,18 @@ function addMobileOrderButton() {
     const existingBtn = navMenu.querySelector('.mobile-order-btn');
     if (existingBtn) existingBtn.remove();
     
-    // Buat tombol Pesan Sekarang untuk mobile
-    const orderBtn = document.createElement('a');
-    orderBtn.href = 'https://wa.me/628984338479?text=Halo%20BibitCabai,%20saya%20ingin%20pesan%20bibit%20cabai';
-    orderBtn.target = '_blank';
-    orderBtn.className = 'mobile-order-btn';
-    orderBtn.innerHTML = '<i class="fab fa-whatsapp"></i> Pesan Sekarang';
-    
-    // Tambahkan tombol ke menu
-    navMenu.appendChild(orderBtn);
+    // Hanya tambahkan tombol di mobile (lebar layar < 769px)
+    if (window.innerWidth < 769) {
+        // Buat tombol Pesan Sekarang untuk mobile
+        const orderBtn = document.createElement('a');
+        orderBtn.href = 'https://wa.me/628984338479?text=Halo%20BibitCabai,%20saya%20ingin%20pesan%20bibit%20cabai';
+        orderBtn.target = '_blank';
+        orderBtn.className = 'mobile-order-btn';
+        orderBtn.innerHTML = '<i class="fab fa-whatsapp"></i> Pesan Sekarang';
+        
+        // Tambahkan tombol ke menu
+        navMenu.appendChild(orderBtn);
+    }
 }
 
 // Fungsi untuk animasi scroll fade-in
@@ -131,25 +134,18 @@ document.addEventListener('DOMContentLoaded', () => {
     // Highlight active link
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     const navLinks = document.querySelectorAll('.nav-link');
-    console.log('Current page:', currentPage);
     
     navLinks.forEach(link => {
         const linkPage = link.getAttribute('href');
-        console.log('Checking link:', linkPage);
         
         if (linkPage === currentPage || 
             (currentPage === '' && linkPage === 'index.html') ||
             (currentPage === 'index.html' && linkPage === 'index.html')) {
             link.classList.add('active');
-            console.log('Active link set:', linkPage);
         } else {
             link.classList.remove('active');
         }
     });
-    
-    // Debug info
-    console.log('Mobile menu button:', document.getElementById('mobileMenuBtn'));
-    console.log('Nav menu:', document.getElementById('navMenu'));
 });
 
 // Reset animasi saat kembali ke halaman
@@ -171,4 +167,7 @@ window.addEventListener('resize', () => {
         }
         document.body.classList.remove('no-scroll');
     }
+    
+    // Update tombol Pesan Sekarang mobile saat resize
+    addMobileOrderButton();
 });
