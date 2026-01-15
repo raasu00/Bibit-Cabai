@@ -4,7 +4,8 @@ function setupMobileMenu() {
     const navMenu = document.getElementById('navMenu');
     
     if (mobileMenuBtn && navMenu) {
-        mobileMenuBtn.addEventListener('click', () => {
+        mobileMenuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
             navMenu.classList.toggle('active');
             const icon = mobileMenuBtn.querySelector('i');
             if (navMenu.classList.contains('active')) {
@@ -21,6 +22,21 @@ function setupMobileMenu() {
                 navMenu.classList.remove('active');
                 mobileMenuBtn.querySelector('i').className = 'fas fa-bars';
             });
+        });
+        
+        // Tutup menu saat klik di luar menu
+        document.addEventListener('click', (e) => {
+            if (navMenu.classList.contains('active') && 
+                !navMenu.contains(e.target) && 
+                !mobileMenuBtn.contains(e.target)) {
+                navMenu.classList.remove('active');
+                mobileMenuBtn.querySelector('i').className = 'fas fa-bars';
+            }
+        });
+        
+        // Cegah event bubbling
+        navMenu.addEventListener('click', (e) => {
+            e.stopPropagation();
         });
     }
 }
