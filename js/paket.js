@@ -125,7 +125,8 @@ function renderPaket(filter = "all") {
     
     paketToShow.forEach((paket, index) => {
         const paketCard = document.createElement('div');
-        paketCard.className = 'paket-card';
+        paketCard.className = 'paket-card fade-in';
+        paketCard.style.animationDelay = `${0.1 * index}s`;
         
         const fiturList = paket.fitur.map(item => 
             `<li><i class="fas fa-check"></i> ${item}</li>`

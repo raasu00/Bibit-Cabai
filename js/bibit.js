@@ -69,9 +69,10 @@ function renderBibit() {
     
     container.innerHTML = '';
     
-    bibitData.forEach(bibit => {
+    bibitData.forEach((bibit, index) => {
         const bibitCard = document.createElement('div');
-        bibitCard.className = 'bibit-card';
+        bibitCard.className = 'bibit-card fade-in';
+        bibitCard.style.animationDelay = `${0.1 * index}s`;
         
         bibitCard.innerHTML = `
             <div class="bibit-img">
