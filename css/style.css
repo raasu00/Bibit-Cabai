@@ -89,7 +89,10 @@ section {
 
 /* Button Styles */
 .btn {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
     background-color: var(--secondary);
     color: white;
     padding: 12px 28px;
@@ -100,6 +103,7 @@ section {
     transition: all 0.3s;
     border: 2px solid var(--secondary);
     cursor: pointer;
+    text-align: center;
 }
 
 .btn:hover {
@@ -225,6 +229,10 @@ nav ul li a.active:after {
 
 /* Tombol Pesan Sekarang di header */
 .order-now-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
     background-color: var(--secondary);
     color: white;
     padding: 10px 25px;
@@ -234,7 +242,6 @@ nav ul li a.active:after {
     font-size: 0.95rem;
     transition: all 0.3s;
     border: 2px solid var(--secondary);
-    display: inline-block;
     box-shadow: 0 3px 10px rgba(255, 152, 0, 0.2);
 }
 
@@ -402,6 +409,66 @@ nav ul li a.active:after {
     margin-right: 10px;
     margin-top: 3px;
     font-size: 0.9rem;
+}
+
+/* ==================== */
+/* STYLE TAMBAHAN UNTUK TOMBOL PAKET */
+/* ==================== */
+
+.paket-button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.paket-button-group .btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    padding: 12px 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+/* Tombol Hubungi Kami */
+.btn-hubungi {
+    background-color: var(--primary);
+    color: white;
+    border: 2px solid var(--primary);
+}
+
+.btn-hubungi:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Untuk desktop - susun tombol sejajar */
+@media (min-width: 577px) {
+    .paket-button-group {
+        flex-direction: row;
+    }
+    
+    .paket-button-group .btn {
+        flex: 1;
+    }
+}
+
+/* Untuk mobile kecil - pastikan tombol tetap terlihat baik */
+@media (max-width: 400px) {
+    .paket-button-group .btn {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+    
+    .paket-button-group .btn i {
+        font-size: 0.9rem;
+    }
 }
 
 /* Bibit Page - Dengan gambar */
@@ -616,4 +683,43 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     font-size: 0.9rem;
     color: #ddd;
+}
+
+/* ==================== */
+/* STYLE UNTUK RESPONSIVE */
+/* ==================== */
+
+/* Untuk desktop - tampilkan tombol Pesan Sekarang */
+@media (min-width: 769px) {
+    .order-now-btn {
+        display: inline-flex !important;
+    }
+    
+    .mobile-order-btn {
+        display: none !important;
+    }
+}
+
+/* Untuk mobile kecil - penyesuaian ukuran */
+@media (max-width: 576px) {
+    .paket-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .paket-card, .bibit-card {
+        margin-bottom: 20px;
+    }
+    
+    .section-title h2 {
+        font-size: 1.7rem;
+    }
+    
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+    }
 }
