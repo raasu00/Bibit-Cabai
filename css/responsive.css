@@ -1,22 +1,20 @@
-/* Responsive Styles */
+/* responsive.css - Perubahan untuk menu mobile */
+
 @media (max-width: 992px) {
-    .hero h1 {
-        font-size: 2.5rem;
+    nav ul {
+        gap: 30px;
     }
     
-    .section-title h2 {
-        font-size: 2rem;
-    }
-    
-    .paket-container, .all-paket-container {
-        grid-template-columns: repeat(2, 1fr);
+    .order-now-btn {
+        padding: 8px 20px;
+        font-size: 0.9rem;
     }
 }
 
 @media (max-width: 768px) {
-    .mobile-menu-btn {
-        display: block;
-        margin-right: 10px;
+    nav {
+        position: static;
+        transform: none;
     }
     
     nav ul {
@@ -38,6 +36,7 @@
         transform: translateY(-20px);
         border-radius: 0 0 10px 10px;
         overflow: hidden;
+        gap: 0;
     }
     
     nav ul.active {
@@ -79,7 +78,7 @@
         display: none;
     }
     
-    /* Tombol Pesan Sekarang di Menu Mobile */
+    /* Tombol Pesan Sekarang di menu mobile */
     .mobile-order-btn {
         display: block;
         width: calc(100% - 40px);
@@ -102,77 +101,14 @@
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
     
-    .hero {
-        padding: 100px 0;
-    }
-    
-    .hero h1 {
-        font-size: 2.2rem;
-    }
-    
-    .hero p {
-        font-size: 1.1rem;
-    }
-    
-    .hero-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .hero-buttons .btn {
-        width: 100%;
-        max-width: 300px;
-        margin-bottom: 10px;
-    }
-    
-    section {
-        padding: 60px 0;
-    }
-    
-    .home-content .toko-description {
-        padding: 30px;
-    }
-    
-    .contact-container {
-        grid-template-columns: 1fr;
+    /* Sembunyikan tombol Pesan Sekarang di header mobile */
+    .order-now-btn {
+        display: none;
     }
 }
 
 @media (max-width: 576px) {
-    .logo-icon {
-        font-size: 1.5rem;
-    }
-    
-    .logo-text {
-        font-size: 1.2rem;
-    }
-    
-    .hero h1 {
-        font-size: 1.9rem;
-    }
-    
-    .section-title h2 {
-        font-size: 1.7rem;
-    }
-    
-    .paket-container, .all-paket-container, .bibit-container {
-        grid-template-columns: 1fr;
-    }
-    
-    .filter-paket {
-        justify-content: flex-start;
-    }
-    
-    .paket-card, .bibit-card {
-        margin-bottom: 20px;
-    }
-    
-    .contact-info, .contact-map {
-        padding: 20px;
-    }
-    
-    .mobile-menu-btn {
-        font-size: 1.3rem;
-        margin-right: 5px;
+    .paket-img {
+        height: 180px;
     }
 }
